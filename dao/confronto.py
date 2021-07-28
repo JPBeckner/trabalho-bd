@@ -36,6 +36,26 @@ class ConfrontoDAO:
  
         # Retorna Objeto
         return Confronto(*dados)
+
+    def busca_confronto_por_data(self, data: str):
+        # exemplo de data(dia-mes-ano): "31-12-2021"
+        # esta querry precisa trazer a luta referente a data correspondente
+        sql = ""
+ 
+        # Executa SQL
+        try:
+            cursor= self.__con.cursor()
+            cursor.execute(sql)
+            dados = cursor.fetchone()
+
+        except Exception as e:
+            self.__erro = str(e)
+ 
+        # Alimenta objeto
+ 
+        # Retorna Objeto
+        return Confronto(*dados)
+
  
     def insere_confronto(self, confronto):
  
