@@ -9,6 +9,10 @@ cx-oracle = "*"
 python-dotenv = "*"
 
 [dev-packages]
+pytest = "*"
+
+[scripts]
+server = "flask run"
 
 [requires]
 python_version = "3"
